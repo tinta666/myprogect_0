@@ -1,0 +1,48 @@
+using System;
+
+namespace ConsoleApp1
+{
+    class Program
+    {
+        static void Main(string[] args)
+        {
+            
+            Console.Write("Введите число x: ");
+            int x = Convert.ToInt32(Console.ReadLine());
+            int stepen = 3;
+            int s, n;
+
+
+            if (x <= -3)
+            {
+                // X ^ 3 + 1 
+                Console.Write("Возводим число " + (x) + " в 3 степень: ");
+                x = Convert.ToInt32(Math.Pow(x, stepen));
+                x = x + 1;
+                Console.WriteLine(x);
+                //https://ci-sharp.ru/Teaching/vozvedenie_v_stepen_s_sharp.html
+            }
+
+
+            if (-3 < x  && x <= 4)
+            {
+
+                //   X(1 + 2^x)
+                s = Convert.ToInt32(Math.Pow(2, x));
+                n = s + 1;
+                x = x * n;
+                Console.WriteLine("Считаем выражение X(1 + 2^X) = " + (x));
+
+            }
+
+
+            if (x > 4)
+            {
+                Console.WriteLine("я тангенс сам считать уже не умею, не то чтобы написать программу которая будет его считать, в инете хуита одна сплошная");
+            } 
+
+        }
+
+    }
+
+}
